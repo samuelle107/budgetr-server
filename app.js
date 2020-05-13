@@ -31,7 +31,7 @@ app.get('/transactions/:user_id', (req, res) => {
             }
         } catch (err) {
             res.status(400).json({
-                payload: {},
+                payload: {[]},
                 err: 'There was an error attempting to get the data',
                 hint: err.hint
             })
