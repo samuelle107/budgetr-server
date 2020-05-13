@@ -5,7 +5,7 @@ require('dotenv').config()
 
 // Initiailization
 const app = express();
-// Found by doing `heroku pg:creditials:url DATABASE`
+// Found by doing `heroku config --app <APP_NAME>` where app name is your heroku app
 const connectionString = process.env.CONNECTION_URL;
 const pool = new Pool({
     connectionString,
