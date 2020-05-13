@@ -39,8 +39,6 @@ app.get('/transactions/:user_id', (req, res) => {
     });
 });
 
-const PORT_NUMBER = 3000;
-
-app.listen(PORT_NUMBER, () => {
+app.listen(process.env.PORT_NUMBER, () => {
     console.log(`The server has started on port ${ PORT_NUMBER }`);
 });
