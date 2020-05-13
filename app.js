@@ -19,6 +19,7 @@ if (process.env.IS_PRODUCTION != 'true') {
 // Endpoints
 app.get('/transactions/:user_id', (req, res) => {
     const query = `SELECT * FROM transactions where user_id = '${ req.params.user_id }'`;
+
     pool.query(query, (querryError, querryResponse) => {
         try {
             if (querryError) {
