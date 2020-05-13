@@ -10,7 +10,7 @@ const connectionString = process.env.CONNECTION_URL;
 const pool = new Pool({
     connectionString,
     ssl: true
-})
+});
 
 if (process.env.IS_PRODUCTION != 'true') {
     process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
@@ -31,10 +31,10 @@ app.get('/transactions/:user_id', (req, res) => {
             }
         } catch (err) {
             res.status(400).json({
-                payload: {[]},
+                payload: { [] },
                 err: 'There was an error attempting to get the data',
                 hint: err.hint
-            })
+            });
         }
     });
 });
